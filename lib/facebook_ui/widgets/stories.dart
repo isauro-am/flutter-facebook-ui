@@ -108,12 +108,12 @@ class StoryItem extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  bottom: 0,
+                    bottom: 0,
                     child: Avatar(
-                  size: 40,
-                  asset: story.avatar,
-                  borderSize: 3,
-                )),
+                      size: 40,
+                      asset: story.avatar,
+                      borderSize: 3,
+                    )),
               ],
             ),
           ),

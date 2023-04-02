@@ -1,10 +1,17 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'facebook_ui/facebook.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
   runApp(
     DevicePreview(
       builder: (_) => const MyApp(),
@@ -22,9 +29,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
+        scrollBehavior: MyCustomScrollBehavior(), // Custom Scroll Behavior for all scrollable widgets
         title: 'Flutter Demo',
         theme: ThemeData(
           primarySwatch: Colors.blueGrey,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
         useInheritedMediaQuery: true,
         builder: DevicePreview.appBuilder,
@@ -33,4 +42,14 @@ class MyApp extends StatelessWidget {
         // home: const MyHomePage(title: 'Flutter Demo Home Page'),
         );
   }
+}
+
+/// This class is a MaterialScrollBehavior that allows dragging with touch and mouse.
+class MyCustomScrollBehavior extends MaterialScrollBehavior {
+  // Override behavior methods and getters like dragDevices
+  @override
+  Set<PointerDeviceKind> get dragDevices => {
+        PointerDeviceKind.touch,
+        PointerDeviceKind.mouse,
+      };
 }
