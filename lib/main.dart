@@ -1,4 +1,5 @@
 import 'package:device_preview/device_preview.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'facebook_ui/facebook.dart';
@@ -7,7 +8,7 @@ void main() {
   runApp(
     DevicePreview(
       builder: (_) => const MyApp(),
-      enabled: true,
+      enabled: !kReleaseMode, // Enable it only in debug mode
     ),
   );
   // runApp(const MyApp());

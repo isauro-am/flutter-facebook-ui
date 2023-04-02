@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import 'widgets/circle_button.dart';
 import 'widgets/quick_actions.dart';
+import 'widgets/stories.dart';
 import 'widgets/whats_mind.dart';
 
 class FacebookUi extends StatelessWidget {
@@ -35,12 +36,19 @@ class FacebookUi extends StatelessWidget {
         ],
       ),
       body: ListView(
-        padding: const EdgeInsets.symmetric(horizontal: 10),
+        // padding: const EdgeInsets.symmetric(horizontal: 10),
         children: const [
-          WhatIsOnYourMind(
-            user: 'assets/users/2.jpg',
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10.0),
+            child: WhatIsOnYourMind(
+              user: 'assets/users/2.jpg',
+            ),
           ),
-          QuickActions(),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10.0),
+            child: QuickActions(),
+          ),
+          UserStories(),
         ],
       ),
     );

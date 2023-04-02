@@ -24,6 +24,7 @@ class ActionButtons extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
       ),
       child: Row(
+        mainAxisSize: MainAxisSize.min,
         children: [
           CircleButton(color: color, icon: icon),
           Text(

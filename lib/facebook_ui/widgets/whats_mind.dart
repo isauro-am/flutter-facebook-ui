@@ -16,7 +16,7 @@ class WhatIsOnYourMind extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 10),
       child: Row(
         children: [
-          Avatar(size: 50, asset: user),
+          Avatar(size: 50, asset: user, borderSize: 2),
           const SizedBox(width: 10),
           const Expanded(
             child: TextField(
@@ -34,19 +34,4 @@ class WhatIsOnYourMind extends StatelessWidget {
       ),
     );
   }
-}
-
-Widget actionIcon(IconData icon, Color color) {
-  return Container(
-    height: 40,
-    width: 40,
-    decoration: BoxDecoration(
-      color: color,
-      shape: BoxShape.circle,
-    ),
-    child: Icon(
-      icon,
-      size: 16,
-    ),
-  );
 }
