@@ -37,7 +37,9 @@ class FacebookUi extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 10),
         children: const [
-          WhatIsOnYourMind(user: 'assets/users/2.jpg',),
+          WhatIsOnYourMind(
+            user: 'assets/users/2.jpg',
+          ),
           QuickActions(),
         ],
       ),
