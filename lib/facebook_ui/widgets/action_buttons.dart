@@ -20,7 +20,7 @@ class ActionButtons extends StatelessWidget {
       padding: const EdgeInsets.only(right: 15),
       margin: const EdgeInsets.only(right: 10),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.4),
+        color: color.withOpacity(0.2),
         borderRadius: BorderRadius.circular(20),
       ),
       child: Row(

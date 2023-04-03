@@ -15,15 +15,15 @@ class QuickActions extends StatelessWidget {
         children: const [
           ActionButtons(
               icon: CustomIcons.photos,
-              color: Color.fromARGB(255, 8, 126, 47),
+              color: Color(0xff75a66f),
               text: 'Gallery'),
           ActionButtons(
               icon: CustomIcons.userFriends,
-              color: Color.fromARGB(255, 21, 73, 151),
+              color: Color(0xff1c89db),
               text: 'Tag Friends'),
           ActionButtons(
               icon: CustomIcons.videoCamera,
-              color: Color.fromARGB(255, 192, 24, 24),
+              color: Color(0xfff8756d),
               text: 'Live'),
             
           // CircleButton(color: Colors.pink, icon: CustomIcons.location),
