@@ -69,6 +69,12 @@ flutter:
     - assets/users/
     - assets/publications/
     - assets/wallpapers/
+    - assets/emojis/angry.svg
+    - assets/emojis/heart.svg
+    - assets/emojis/laughing.svg
+    - assets/emojis/like.svg
+    - assets/emojis/sad.svg
+    - assets/emojis/shocked.svg
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
