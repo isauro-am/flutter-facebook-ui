@@ -18,7 +18,11 @@ class PublicationItem extends StatelessWidget {
 
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8),
-      child: SizedBox(
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(10),
+        ),
         width: double.infinity,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -57,9 +61,8 @@ class PublicationItem extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
-              height: 180,
-              width: double.infinity,
+            AspectRatio(
+              aspectRatio: 16 / 9,
               child: Image(
                 fit: BoxFit.cover,
                 image: NetworkImage(
@@ -83,7 +86,11 @@ class PublicationItem extends StatelessWidget {
 
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
-              child: Text(publication.title),
+              child: Text(publication.title,
+              style: const TextStyle(
+                fontWeight: FontWeight.w400,
+              ),
+              ),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8),
@@ -140,10 +147,10 @@ class PublicationItem extends StatelessWidget {
 /// 1,000,000, return the count divided by 1000, rounded to one decimal place, and appended with a K.
 /// Otherwise, return the count divided by 1,000,000, rounded to one decimal place, and appended with an
 /// M
-/// 
+///
 /// Args:
 ///   count (int): The number to be formatted.
-/// 
+///
 /// Returns:
 ///   A string.
 String formatCount(int count) {
